@@ -1,9 +1,9 @@
 {
-    "eventFrequency": 5000,
-    "varyEventFrequency": true,
+    "eventFrequency": 1000,
+    "varyEventFrequency": false,
     "repeatWorkflow": true,
-    "timeBetweenRepeat": 50,
-    "varyRepeatFrequency": true,
+    "timeBetweenRepeat": 0,
+    "varyRepeatFrequency": false,
     "steps": [{
             "config": [{"EntityType":"Adverts","createdDate": "now(-1_h)","advertID": "long(1,100)","advertName": "alpha(20)", "brand": "random('Samsung','Nokia','Apple','Huawei','Blackberry',OnePlus','Sony')"}],
              "duration": 0 
