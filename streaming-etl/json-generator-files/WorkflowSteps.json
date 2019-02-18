@@ -1,0 +1,16 @@
+{
+    "eventFrequency": 1000,
+    "varyEventFrequency": false,
+    "repeatWorkflow": true,
+    "timeBetweenRepeat": 0,
+    "varyRepeatFrequency": false,
+    "steps": [{
+            "config": [{"EntityType":"Adverts","createdDate": "now(-1_h)","advertID": "long(1,100)","advertName": "alpha(20)", "brand": "random('Samsung','Nokia','Apple','Huawei','Blackberry',OnePlus','Sony')"}],
+             "duration": 0 
+},{
+            "config": [{
+                    "EntityType":"Impressions","impressionDate": "now(-1_h)", "advertID": "long(1,100)","impressionURL": "random('http://www.site1.com/abc','http://www.site2.com/abc','http://www.site3.com/abc','http://www.site4.com/abc','http://www.site5.com/abc','http://www.site6.com/abc','http://www.site7.com/abc','http://www.site8.com/abc','http://www.site9.com/abc','http://www.site10.com/abc')", "sessionID":"uuid()", "firstName":"firstName()","lastName":"lastName()"
+                }],
+            "duration": 0
+        }]
+}
