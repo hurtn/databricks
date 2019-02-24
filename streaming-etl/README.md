@@ -31,9 +31,17 @@ Whilst ever care has been taken to make the scenario and demonstration as realis
 
 ### Minimal Configuration
 
-If you wish to run the pipeline without the full Azure setup, you can “stream” files from storage. First [download the sample files](https://github.com/hurtn/databricks/blob/master/streaming-etl/files.zip) and extract the advert and impresssion archives to a local folder. Ensure you have [followed the instructions](https://medium.com/@Nicholas_Hurt/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-delta-f0f57ac7aa67#89fd) in part II to set up storage, SQL DW and Databricks. Then use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) to copy these files to Azure Blob or Azure Data Lake. You will need to put them in a folder called “source” below the mount point (basePath) location.
+![](images/minconfig.jpg)
+
+If you wish to run the pipeline with minimal setup in Azure, you can “stream” files from storage. First [download the sample files](https://github.com/hurtn/databricks/blob/master/streaming-etl/files.zip) and extract the advert and impresssion archives to a local folder. Ensure you have [followed the instructions](https://medium.com/@Nicholas_Hurt/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-delta-f0f57ac7aa67#89fd) in part II to set up storage, SQL DW and Databricks. Then use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) to copy these files to Azure Blob or Azure Data Lake. You will need to put them in a folder called “source” below the mount point (basePath) location.
 
 You can skip the next section but first [import the notebook archive](https://docs.azuredatabricks.net/user-guide/notebooks/notebook-manage.html#import-an-archive) using [this URL](https://github.com/hurtn/databricks/blob/master/streaming-etl/Streaming%20ETL.dbc).
+
+### Full Configuration
+
+![](https://cdn-images-1.medium.com/max/1600/1*kJuJvf63f2d2XvSYpWDjTg.png)
+
+Please follow the steps detailed in [part II of my blog](https://medium.com/@Nicholas_Hurt/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-delta-f0f57ac7aa67) to complete the full setup.
 
 ### Workspace Configuration
 
