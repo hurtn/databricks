@@ -3,7 +3,7 @@
 # An Introduction to Streaming ETL on Azure Databricks using Structured Streaming & Databricks Delta
 
 ### Welcome
-To read  the full background to this demonstration please read [my blog.](https://medium.com/microsoftazure/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-16b369d77e34) Please review the license agreement for this demonstration.
+To read  the full background to this demonstration please read [my blog.](https://medium.com/microsoftazure/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-16b369d77e34) Please review the terms of use and distribution for this demonstration in the [license agreement](LICENSE.txt).
 
 
 ### Introduction
