@@ -7,7 +7,7 @@ To read the full background to this demonstration please see [this blog post.](h
 
 
 ### Introduction
-This is a demonstration of a streaming ETL pipeline using Spark, running on Azure Databricks.
+This is a demonstration of a streaming ETL pipeline using Spark, running on Azure Databricks. The ETL process reads data from two streams and other static data sources/tables and attempts to transform these data sets into a dimensional model (star schema).
 
 
 ### Scenario
