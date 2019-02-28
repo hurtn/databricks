@@ -38,7 +38,7 @@ If you wish to run the pipeline with minimal setup in Azure, you can “stream�
 AzCopy /Source:source-path-goes-here\adverts /Dest:https://storage-account-goes-here.blob.core.windows.net/container-name-goes-here/adverts /DestKey:blob-key-goes-here /S
 AzCopy /Source:source-path-goes-here\impressions /Dest:https://storage-account-goes-here.blob.core.windows.net/container-name-goes-here/impressions /DestKey:blob-key-goes-here /S
 ```
-You will need to adverts and impressions folders called “source” below the mount point (sourcePath) location.
+You will need to ensure the adverts and impressions folders are below the mount point (sourcePath) location.
 
 You can skip the next section but first [import the notebook archive](https://docs.azuredatabricks.net/user-guide/notebooks/notebook-manage.html#import-an-archive) using [this URL](https://github.com/hurtn/databricks/blob/master/streaming-etl/Streaming%20ETL.dbc).
 
