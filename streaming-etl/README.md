@@ -33,7 +33,12 @@ Whilst ever care has been taken to make the scenario and demonstration as realis
 
 ![](images/minconfig.jpg)
 
-If you wish to run the pipeline with minimal setup in Azure, you can “stream” files from storage. First [download the sample files](https://github.com/hurtn/databricks/blob/master/streaming-etl/files.zip) and extract the advert and impresssion archives to a local folder. Ensure you have [followed the instructions](https://medium.com/@Nicholas_Hurt/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-delta-f0f57ac7aa67#89fd) in part II to set up storage, SQL DW and Databricks. Then use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) to copy these files to Azure Blob or Azure Data Lake. You will need to put them in a folder called “source” below the mount point (basePath) location.
+If you wish to run the pipeline with minimal setup in Azure, you can “stream” files from storage. First [download the sample files](https://github.com/hurtn/databricks/blob/master/streaming-etl/files.zip) and extract the advert and impresssion archives to a local folder. Ensure you have [followed the instructions](https://medium.com/@Nicholas_Hurt/an-introduction-to-streaming-etl-on-azure-databricks-using-structured-streaming-databricks-delta-f0f57ac7aa67#89fd) in part II to set up storage, SQL DW and Databricks. Then use [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) to copy these files to Azure Blob or Azure Data Lake. If you want to use AzCopy you can only copy the files to Blob (ADLS not supported yet) using a similar command
+```
+AzCopy /Source:source-path-goes-here\adverts /Dest:https://storage-account-goes-here.blob.core.windows.net/container-name-goes-here/adverts /DestKey:blob-key-goes-here /S
+AzCopy /Source:source-path-goes-here\impressions /Dest:https://storage-account-goes-here.blob.core.windows.net/container-name-goes-here/impressions /DestKey:blob-key-goes-here /S
+```
+You will need to adverts and impressions folders called “source” below the mount point (sourcePath) location.
 
 You can skip the next section but first [import the notebook archive](https://docs.azuredatabricks.net/user-guide/notebooks/notebook-manage.html#import-an-archive) using [this URL](https://github.com/hurtn/databricks/blob/master/streaming-etl/Streaming%20ETL.dbc).
 
