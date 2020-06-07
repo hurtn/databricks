@@ -41,8 +41,7 @@ payload = JSON.stringify({
 request.post({
     agent: false,
     url: 'https://adb-'+cdatabricksworkspaceid+'.12.azuredatabricks.net/api/2.0/token/create',
-    headers: {
-        
+    headers: {        
         'X-Databricks-Org-Id':cdatabricksworkspaceid, 'Authorization': 'Bearer ' + bearertoken
     },
     body: payload
